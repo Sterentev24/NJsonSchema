@@ -77,7 +77,7 @@
 
     {% if HasInheritance and SupportsOverrideKeyword %}override {% endif %}init(_data?: any{% if HandleReferences %}, _mappings?: any{% endif %}) {
 {% if HasInheritance -%}
-        super.init(_data);
+        super.init(_data{% if HandleReferences %}, _mappings{% endif %});
 {% endif -%}
 {% if HasIndexerProperty or HasProperties -%}
         if (_data) {
