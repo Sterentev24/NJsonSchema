@@ -112,6 +112,12 @@ namespace NJsonSchema.CodeGeneration.TypeScript
         /// <summary>Gets a value indicating whether to generate type check functions (for type style interface only, default: false).</summary>
         public bool GenerateTypeCheckFunctions { get; set; }
 
+        /// <summary>
+        /// Gets a value indicating where to inject every schema type to main client file or own file
+        /// </summary>
+        public bool ExtractEverySchemaTypeToFile { get; set; }
+
+
         internal ITemplate CreateTemplate(string typeName, object model)
         {
             if (ClassTypes != null && ClassTypes.Contains(typeName))

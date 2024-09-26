@@ -1,4 +1,4 @@
-﻿function jsonParse(json: any, reviver?: any) {
+﻿export function jsonParse(json: any, reviver?: any) {
     json = JSON.parse(json, reviver);
 
     var byid: any = {};
@@ -41,7 +41,7 @@
     return json;
 }
 
-function createInstance<T>(data: any, mappings: any, type: any): T | null {
+export function createInstance<T>(data: any, mappings: any, type: any): T | null {
   if (!mappings)
     mappings = [];
   if (!data)
